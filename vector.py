@@ -18,9 +18,12 @@ class Vector():
     def __sub__(self, other):
         return Vector(self.x - other.x, self.y - other.y)
 
-    def __mul__(self, scalar):
+    def scalar_mul(self, scalar):
         self.x *= scalar
         self.y *= scalar
 
     def distance(self, other):
         return Vector(self.x - other.x, self.y - other.y).magnitude()
+
+    def __str__(self):
+        return "x: " + str(self.x) + ", y: " + str(self.y)
