@@ -19,8 +19,8 @@ class Vector():
         return Vector(self.x - other.x, self.y - other.y)
 
     def __mul__(self, scalar):
-        self.x * scalar
-        self.y * scalar
+        self.x *= scalar
+        self.y *= scalar
 
     def distance(self, other):
         return Vector(self.x - other.x, self.y - other.y).magnitude()
